@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Satisfy&display=swap');
+
+
+body {
+  background-image: url('../public/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.txtBirthday {
+  font-size: 80px;
+  font-family: 'Satisfy', cursive;
+  color: rgb(243, 21, 89);
+  margin: 0;
+  position: relative;
+  top: 100px;
+}
+
+.grid-img {
+  column-count: 3;
+  column-gap: 10px;
+}
+
+.grid-img img {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 15px;
+  break-inside: avoid;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.grid-img {
+  padding-top: 110px;
+}
+
+#balloon-container {
+  height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: opacity 500ms;
+  z-index: 1;
+}
+
+.balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+  content: "▲";
+  text-align: center;
+  display: block;
+  position: absolute;
+  color: inherit;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-300vh);
+    opacity: 0;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#playButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 30%;
+  font-size: 15px;
+  z-index: 1;
+}
+
+#playButton:hover {
+  background-color: #0b130b;
+}
+
+#cakeButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  left: 20%;
+  font-size: 15px;
+  z-index: 1;
+}
+
+#cakeButton:hover {
+  background-color: #0b130b;
+}
+
+@media (max-width: 768px) {
+  .txtBirthday {
+    font-size: 40px;
+  }
+
+  .grid-img {
+    column-count: 1;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  #playButton,
+  #cakeButton {
+    width: 100%;
+    margin-bottom: 10px;
+    right: auto;
+    left: auto;
+  }
+
+  #playButton {
+    position: static;
+  }
+
+  #cakeButton {
+    position: static;
+  }
+}

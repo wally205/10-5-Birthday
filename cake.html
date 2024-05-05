@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cakeStyle.css">
+</head>
+<body>
+  <div id="balloon-container"></div>
+    <div class="container">
+      <h1 class="textWish">Best wishes for you</h1>
+        <div class="cake">
+            <div class="top-cake"></div>
+            <div class="middle-cake"></div>
+            <div class="bottom-cake"></div>
+            <div class="candle">
+              <div class="flame"></div>
+            </div>
+          </div>
+    </div>
+  <form id="myForm">
+    <label class="formLabel" for="username">Wishes:</label><br>
+    <input class="formInput" type="text" id="username" name="username" placeholder="Viết điều ước vô đây nè cô"><br>
+    <button id=formButton type="submit" onclick="showAlertandMusic()">Gửi</button>
+  </form>
+    <audio id ="mySound2" autoplay muted >
+      <source src="sound/hpbd_piano.mp3" type="audio/mpeg"/>
+    </audio>
+</body>
+<script src="script.js"> </script>
+</html>

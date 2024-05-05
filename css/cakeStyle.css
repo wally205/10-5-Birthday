@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap%22%20rel=%22stylesheet');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ea9f96;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.textWish {
+  font-size: 80px;
+  font-family: 'Satisfy', cursive;
+  color: rgb(243, 21, 89);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 25%; 
+  top: 80px;
+}
+
+.left-text {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  text-align: left;
+  padding: 20px;
+  width: 30%;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  z-index: 1;
+}
+
+#myForm {
+  width: 300px;
+  margin: auto;
+}
+
+#myForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  border-radius: 40%;
+}
+
+#myForm input[type="text"],
+#myForm textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#myForm textarea {
+  height: 200px;
+}
+
+#formButton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.cake {
+    width: 100%;
+    position: absolute;
+    bottom: -80px; /* Đặt bottom ban đầu là -80px để bánh kem ẩn đi */
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-delay: 0.5s; /* Thời gian trễ trước khi bắt đầu animation */
+    animation-fill-mode: forwards; /* Giữ lại trạng thái cuối cùng của animation */
+  }
+  
+  @keyframes slideUp {
+    0% {
+      bottom: -80px;
+    }
+    100% {
+      bottom: 200px; /* Giá trị bottom khi bánh kem xuất hiện hoàn toàn */
+    }
+  }
+
+  .top-cake
+  {
+    height: 80px;
+    width: 280px;
+    position: relative;
+    margin: auto;
+    background-repeat: repeat;
+    background-size: 100% 100%, 60px 100px;
+    background-position: 28px 0;
+    border-radius: 40% 40% 0 0; 
+    background-image: linear-gradient(
+      transparent 50px,
+      #e78fd7 50px,
+      #e298e1 60px,
+      transparent 60px
+    ),
+    radial-gradient(circle at 30px 5px, #ff69b4 30px,#ffffff  31px);
+  }
+  
+  .middle-cake {
+    height: 80px;
+    width: 300px;
+    position: relative;
+    margin: auto;
+    background-repeat: repeat;
+    background-size: 100% 100%, 60px 100px;
+    background-position: 28px 0;
+    border-radius: 10% 10% 0 0;
+    background-image: linear-gradient(
+      transparent 50px,
+      #e78fd7 50px,
+      #e298e1 60px,
+      transparent 60px
+    ),
+    radial-gradient(circle at 30px 5px, #ff69b4 30px, #ffffff 31px);
+  }
+
+  .bottom-cake
+  {
+    height: 80px;
+    width: 350px;
+    position: relative;
+    margin: auto;
+    background-repeat: repeat;
+    background-size: 100% 100%, 60px 100px;
+    background-position: 28px 0;
+    border-radius: 10% 10% 0 0;
+    background-image: linear-gradient(
+      transparent 50px,
+      #e78fd7 50px,
+      #e298e1 60px,
+      transparent 60px
+    ),
+    radial-gradient(circle at 30px 5px, #ff69b4 30px, #fffaff 31px);
+  }
+
+.candle {
+  background: repeating-linear-gradient(
+    45deg,
+    #fd3018 0,
+    #fd3018 5px,
+    #ffa89e 5px,
+    #ffa89e 10px
+  );
+  height: 45px;
+  width: 15px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 240px;
+}
+
+.flame
+{
+    width: 15px;
+    height: 30px;
+    background: radial-gradient(ellipse at bottom, #f00 0%, rgba(255, 165, 0, 0.5) 50%, rgba(255, 255, 0, 0) 100%);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 20% 20%;
+    box-shadow: 0 0 10px #f00;
+    animation-name: flameAnimation;
+    animation-duration: 3s;
+    animation-delay: 100s; /* Ngọn nến sẽ tắt sau ... giây */
+    animation-fill-mode: forwards; /* Giữ lại trạng thái cuối cùng của animation */
+}
+
+@keyframes flameAnimation {
+    0% {
+      opacity: 1; /* Ngọn nến hiển thị */
+    }
+    50% {
+      opacity: 0; /* Ngọn nến mờ dần */
+    }
+    100% {
+      opacity: 0; /* Ngọn nến ẩn đi */
+    }
+  }
+
+  #balloon-container {
+    height: 100vh;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: opacity 500ms;
+    z-index: 1;
+  }
+  .balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+  }
+  .balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .balloon:after {
+      content: "▲";
+      text-align: center;
+      display: block;
+      position: absolute;
+      color: inherit;
+      top: 120px;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+  @keyframes float {
+    from {transform: translateY(100vh);
+    opacity: 1;}
+    to {transform: translateY(-300vh);
+    opacity: 0;}
+  }
+
+  @media (max-width: 768px) {
+    .cake {
+      width: 100%;
+      position: absolute;
+      bottom: -80px; /* Đặt bottom ban đầu là -80px để bánh kem ẩn đi */
+      animation-name: slideUp;
+      animation-duration: 1s;
+      animation-delay: 0.5s; /* Thời gian trễ trước khi bắt đầu animation */
+      animation-fill-mode: forwards; /* Giữ lại trạng thái cuối cùng của animation */
+    }
+    
+    @keyframes slideUp {
+      0% {
+        bottom: -80px;
+      }
+      100% {
+        bottom: 170px; /* Giá trị bottom khi bánh kem xuất hiện hoàn toàn */
+      }
+    }
+
+    .textWish {
+      font-size: 50px;
+      top: 15%;
+      left: 20%; 
+    }
+  }
+
+
+
+
