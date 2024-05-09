@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ea9f96;
+  background-color: #e3aba4;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -27,16 +27,6 @@ body {
   top: 80px;
 }
 
-.left-text {
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  text-align: left;
-  padding: 20px;
-  width: 30%;
-  font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
-}
 
 form {
   position: absolute;
@@ -209,7 +199,7 @@ form {
     padding: 1em;
     box-sizing: border-box;
     display: flex;
-    position: absolute;
+    position: fixed;
     flex-wrap: wrap;
     overflow: hidden;
     transition: opacity 500ms;
@@ -257,8 +247,6 @@ form {
       width: 100%;
       position: absolute;
       bottom: -80px; /* Đặt bottom ban đầu là -80px để bánh kem ẩn đi */
-      animation-name: slideUp;
-      animation-duration: 1s;
       animation-delay: 0.5s; /* Thời gian trễ trước khi bắt đầu animation */
       animation-fill-mode: forwards; /* Giữ lại trạng thái cuối cùng của animation */
     }
